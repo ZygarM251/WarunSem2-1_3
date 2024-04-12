@@ -164,7 +164,42 @@ int** alokacjaCiagła(int** tab, int stareWiersze, int stareKolumny, int noweWie
 	return tablica;
 }
 
+
 int main(){
+
+	const int wiersze = 3;
+	const int kolumny = 5;
+	int tab[wiersze][kolumny] = {};
+
+	for (size_t i = 0; i < wiersze; i++)
+	{
+		for (size_t j= 0; j < kolumny; j++)
+		{
+			tab[i][j] = i + j;
+		}
+	}
+
+
+	for (size_t i = 0; i < wiersze; i++)
+	{
+		for (size_t j = 0; j < kolumny; j++)
+		{
+			cout << tab[i][j]<<" ";
+		}
+		cout << endl;
+	}
+
+	alokacjaCiagła(tab, wiersze, kolumny, 3, 3);
+
+	for (size_t i = 0; i < wiersze; i++)
+	{
+		for (size_t j = 0; j < kolumny; j++)
+		{
+			cout << tab[i][j] << " ";
+		}
+		cout << endl;
+	}
+
 
 
 }
